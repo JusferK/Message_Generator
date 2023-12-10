@@ -1,4 +1,6 @@
-// all quotes will be choosen from here.
+// this will defined what type of quotes we wanted to 
+let quotesWanted = ''; // you can choose in beetwen stoic, bible
+// stoic quotes
 const senecaQ = [
     "We suffer more often in imagination than in reality.",
     "Ignorance is the cause of fear.",
@@ -67,7 +69,50 @@ const diogenesQ = [
     "Poverty is a virtue which one can teach oneself."
 ];
 
-const allQuotes = [senecaQ, marcusQ, epictetusQ, zenoQ, musoniusQ, diogenesQ];
+// bible quotes
+const romansQ = [
+    "Romans 15:13- May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
+    "Romans 8:38-39 - For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+    "Romans 8:31 - What, then, shall we say in response to these things? If God is for us, who can be against us?",
+    "Romans 8:28 - And we know that in all things God works for the good of those who love him, who have been called according to his purpose."
+];
+
+const psalmQ = [
+    "Psalm 27:1 - The Lord is my light and my salvation; whom shall I fear? The Lord is the stronghold of my life; of whom shall I be afraid?",
+    "Psalm 31:24 - Be strong, and let your heart take courage, all you who wait for the Lord!",
+    "Psalm 107:1 - Give thanks to the Lord, for He is good; his love endures forever.",
+    "Psalm 34:8 - Taste and see that the Lord is good; blessed is the one who takes refuge in him.",
+    "Psalm 3:3 - But you, Lord, are a shield around me, my glory, the One who lifts my head high.",
+    "Psalm 96: 1-3 - Sing to the Lord a new song; sing to the Lord, all the earth. Sing to the Lord, praise his name; proclaim his salvation day after day. Declare his glory among the nations, his marvelous deeds among all peoples."
+];
+
+const isaiahQ = [
+    "41:10 - Fear not, for I am with you; be not dismayed, for I am your God; I will strengthen you, I will help you, I will uphold you with my righteous right hand.",
+    "Isaiah 40:31 - But they who wait for the Lord shall renew their strength; they shall mount up with wings like eagles; they shall run and not be weary; they shall walk and not faint.",
+    "Isaiah 66:13 - As a mother comforts her child, so will I comfort you; and you will be comforted over Jerusalem."
+];
+
+const matthewQ = [
+    'Matthew 11;28 - Come to Me, all you who are weary and burdened, and I will give you rest.',
+    'Matthew 17:20 - Our faith can move mountains.',
+    'Matthew 19:26 - But Jesus looked at them and said, "With man this is impossible, but with God all things are possible."'
+];
+
+const corinthiansQ = [
+    '1 Corinthians 16:13-14 - Be watchful, stand firm in the faith, act like men, be strong. Let all that you do be done in love.',
+    '1 Corinthians 15:58 - Therefore, my beloved brothers, be steadfast, immovable, always abounding in the work of the Lord, knowing that in the Lord your labor is not in vain.',
+    '2 Corinthians 4:16-18 - So we do not lose heart. Though our outer self is wasting away, our inner self is being renewed day by day. For this light momentary affliction is preparing for us an eternal weight of glory beyond all comparison, as we look not to the things that are seen but to the things that are unseen.'
+];
+
+const johnQ = [
+    "John 15:13 - Greater love has no one than this: to lay down one's life for one's friends.",
+    "John 16:33 - I have told you all this so that you may have peace in me. Here on earth you will have many trials and sorrows. But take heart, because I have overcome the world.",
+    "1 John 4:18 - There is no fear in love. But perfect love drives out fear, because fear has to do with punishment. The one who fears is not made perfect in love."
+];
+
+
+
+const allStoicQuotes = [senecaQ, marcusQ, epictetusQ, zenoQ, musoniusQ, diogenesQ];
 
 const randomQuote = array => {
     let arrayRandomPick = Math.floor(Math.random() * array.length);
@@ -76,4 +121,3 @@ const randomQuote = array => {
     return array[arrayRandomPick][randomQuote];
 }
 
-console.log(randomQuote(allQuotes));
