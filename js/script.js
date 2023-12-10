@@ -67,3 +67,13 @@ const diogenesQ = [
     "Poverty is a virtue which one can teach oneself."
 ];
 
+const allQuotes = [senecaQ, marcusQ, epictetusQ, zenoQ, musoniusQ, diogenesQ];
+
+const randomQuote = array => {
+    let arrayRandomPick = Math.floor(Math.random() * array.length);
+    let randomQuote = Math.floor(Math.random() * array[arrayRandomPick].length);
+
+    return array[arrayRandomPick][randomQuote];
+}
+
+console.log(randomQuote(allQuotes));
