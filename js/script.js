@@ -1,5 +1,9 @@
-// this will defined what type of quotes we wanted to 
-let quotesWanted = ''; // you can choose in beetwen stoic, bible 
+// this will defined what type of quotes we wanted to
+let quotesWanted = 'stoic'; // you can choose in beetwen stoic, biblical, scientific or all
+let quotesWanted2 = 'biblical';
+let quotesWanted3 = 'scientific';
+let quotesWanted4 = 'all'
+
 // stoic quotes
 const senecaQ = [
     "We suffer more often in imagination than in reality. - Seneca",
@@ -149,11 +153,11 @@ const teslaQ = [
     "The day science begins to study non-physical phenomena, it will make more progress in one decade than in all the previous centuries of its existence.",
     "The scientists of today think deeply instead of clearly. One must be sane to think clearly, but one can think deeply and be quite insane.",
     "My brain is only a receiver, in the Universe there is a core from which we obtain knowledge, strength and inspiration. I have not penetrated into the secrets of this core, but I know that it exists."
-]
+];
 
 const allRandomQuotes = [senecaQ, marcusQ, epictetusQ, zenoQ, musoniusQ, diogenesQ, romansQ, psalmQ, isaiahQ, matthewQ, corinthiansQ, johnQ, einsteingQ, oppenheimerQ, isaacNewtonQ, teslaQ];
 const allStoicQuotes = [senecaQ, marcusQ, epictetusQ, zenoQ, musoniusQ, diogenesQ];
-const allbibleQuotes = [romansQ, psalmQ, isaiahQ, matthewQ, corinthiansQ, johnQ];
+const allBibleQuotes = [romansQ, psalmQ, isaiahQ, matthewQ, corinthiansQ, johnQ];
 const allCientificQuotes = [einsteingQ, oppenheimerQ, isaacNewtonQ, teslaQ];
 
 const randomQuote = array => {
@@ -163,3 +167,21 @@ const randomQuote = array => {
     return array[arrayRandomPick][randomQuote];
 }
 
+const quotesCategories = answer => {
+    if(answer === 'stoic') {
+        return randomQuote(allStoicQuotes);
+    } else if(answer === 'biblical') {
+        return randomQuote(allBibleQuotes);
+    } else if(answer === 'scientific') {
+        return randomQuote(allCientificQuotes);
+    } else if(answer === 'all') {
+        return randomQuote(allRandomQuotes);
+    } else {
+        return 'enter a valid category'
+    }
+}
+
+console.log(quotesCategories(quotesWanted));
+console.log(quotesCategories(quotesWanted2));
+console.log(quotesCategories(quotesWanted3));
+console.log(quotesCategories(quotesWanted4));
